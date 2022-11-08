@@ -15,6 +15,7 @@ function demonstrationFunction() {
   var outputColorString = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
 
   heading.classList.toggle("specialTitle");
+  outputParagraph.classList.toggle("specialText")
 
   var currentInputText = inputElement.value;
   var currentInputAsNumber = parseFloat(currentInputText);
