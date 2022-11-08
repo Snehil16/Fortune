@@ -4,9 +4,9 @@ var outputParagraph = document.getElementById("outputText");
 var inputElement = document.getElementById("myInput");
 
 
-executeButton.addEventListener("click", demonstrationFunction);
+executeButton.addEventListener("click", generate);
 
-function demonstrationFunction() {
+function restyle(){
 
   var randomRed = Math.random() * 255;
   var randomGreen = Math.random() * 255;
@@ -14,8 +14,13 @@ function demonstrationFunction() {
 
   var outputColorString = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
 
+  return outputColorString
+}
+
+function generate(outputColorString) {
+
   heading.classList.toggle("specialTitle");
-  outputParagraph.style.color=outputColorString;
+  outputParagraph.style.color = outputColorString;
   outputParagraph.classList.toggle("specialText");
 
   var currentInputText = inputElement.value;
