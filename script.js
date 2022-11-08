@@ -15,7 +15,8 @@ function demonstrationFunction() {
   var outputColorString = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
 
   heading.classList.toggle("specialTitle");
-  outputParagraph.classList.toggle("specialText")
+  outputParagraph.style.color=outputColorString;
+  outputParagraph.classList.toggle("specialText");
 
   var currentInputText = inputElement.value;
   var currentInputAsNumber = parseFloat(currentInputText);
@@ -27,16 +28,5 @@ function demonstrationFunction() {
   var randomIndex = Math.floor( Math.random() * fortuneArray.length );
 
   outputParagraph.innerHTML = currentInputText + " " + fortuneArray[randomIndex];
-
-}
-
-function mouseMovedFunc(eventDetails) {
-
-  var mouseX = eventDetails.screenX;
-  var mouseY = eventDetails.screenY;
-
-  console.log("Cursor is at: " + mouseX + "," + mouseY + ".");
-
-  executeButton.style.transform = "translate(" + mouseX + "px," + mouseY + "px)";
 
 }
